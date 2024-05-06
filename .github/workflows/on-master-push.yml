@@ -35,6 +35,9 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          flavor: |
+            latest=auto
+            suffix=-${{ env.VERSION }}
           tags: |
             type=ref,event=tag,priority=200
             type=ref,event=branch,priority=200

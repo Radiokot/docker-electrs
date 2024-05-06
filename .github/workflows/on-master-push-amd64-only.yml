@@ -37,7 +37,7 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           flavor: |
             latest=auto
-            suffix=amd64
+            suffix=-${{ env.VERSION }}-amd64
           tags: |
             type=ref,event=tag,priority=200
             type=ref,event=branch,priority=200
