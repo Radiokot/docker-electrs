@@ -18,7 +18,7 @@ jobs:
     name: Build electrs image
     runs-on: ubuntu-22.04
     env:
-      VERSION: v0.10.2
+      VERSION: v0.10.4
     steps:
       - name: Checkout
         uses: actions/checkout@v3
